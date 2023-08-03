@@ -10,14 +10,14 @@ public class ShopStock {
         this.productList = productList;
     }
 
-   public List<Product> ExucutePattern(FilteringStrategy filteringStrategy){
-       List<Product> arr =new ArrayList<>();
-       for(Product product :productList){
-           if(filteringStrategy.filter(product))
-           arr.add(product);
-       }
-       return arr;
-   }
+    public List<Product> executeFilteringStrategy(FilteringStrategy filteringStrategy) {
+        List<Product> res = new ArrayList<>();
+        for (Product product : productList) {
+            if (filteringStrategy.filter(product))
+                res.add(product);
+        }
+        return res;
+    }
 
     // Write your code here!
 }
