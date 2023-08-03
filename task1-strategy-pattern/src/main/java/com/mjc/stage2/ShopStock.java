@@ -12,9 +12,9 @@ public class ShopStock {
 
    public List<Product> ExucutePattern(FilteringStrategy filteringStrategy){
        List<Product> arr =new ArrayList<>();
-       for(Product prod :productList){
-           if(filteringStrategy.filter(prod))
-           arr.add(prod);
+       for(Product product :productList){
+           if(filteringStrategy.filter(product))
+           arr.add(product);
        }
        return arr;
    }
