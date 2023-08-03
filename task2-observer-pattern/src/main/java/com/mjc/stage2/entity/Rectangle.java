@@ -2,6 +2,7 @@ package com.mjc.stage2.entity;
 
 import com.mjc.stage2.Observable;
 import com.mjc.stage2.Observer;
+import com.mjc.stage2.event.RectangleEvent;
 import com.mjc.stage2.impl.RectangleObserver;
 
 import java.util.ArrayList;
@@ -57,7 +58,8 @@ public class Rectangle implements Observable {
 
     @Override
     public void notifyObserver() {
-        observers.notify();
+        RectangleEvent event = new RectangleEvent(this);
+        observers.forEach(observer -> observer.handleEvent(event));
     }
 
 

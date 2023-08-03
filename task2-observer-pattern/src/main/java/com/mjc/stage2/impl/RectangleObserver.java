@@ -19,7 +19,7 @@ public class RectangleObserver implements Observer {
         double side1 = rectangle.getSideA();
         double side2 = rectangle.getSideB();
         RectangleWarehouse.getInstance().put(rectangle.getId(),
-                new RectangleValues(side1*side2, (side1+side2)*2));
+                 new RectangleValues(side1*side2, (side1+side2)*2));
     }
 
 }
