@@ -1,13 +1,13 @@
 package com.mjc.stage2.impl;
 
-import com.mjc.stage2.Observable;
+
 import com.mjc.stage2.Observer;
 import com.mjc.stage2.entity.Rectangle;
 import com.mjc.stage2.entity.RectangleValues;
 import com.mjc.stage2.event.RectangleEvent;
 import com.mjc.stage2.warehouse.RectangleWarehouse;
 
-import java.util.EventObject;
+
 
 public class RectangleObserver implements Observer {
 
@@ -19,7 +19,7 @@ public class RectangleObserver implements Observer {
         double side1 = rectangle.getSideA();
         double side2 = rectangle.getSideB();
         RectangleWarehouse.getInstance().put(rectangle.getId(),
-                new RectangleValues(side1*side2, (side1*2)+(side2*2)));
+                new RectangleValues(side1*side2, (side1+side2)*2));
     }
 
 }
